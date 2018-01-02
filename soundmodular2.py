@@ -56,6 +56,7 @@ class Patcher:
             return audio_format_range_mapper[self.format]
         except KeyError:
             print "Format must be int8, int16 or int32. See PyAudio docs"
+            quit()
 
     def to_master(self, block, gain_left, gain_right):
         """
